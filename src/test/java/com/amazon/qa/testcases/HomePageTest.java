@@ -54,12 +54,7 @@ public class HomePageTest extends TestBase {
 		Actual.add("Week View");
 		Actual.add("Month View");
 
-		System.out.println("git check");
-		System.out.println("git check");
-
-		System.out.println("git check");
-
-		System.out.println("git check");
+	
 
 		ArrayList<String> items = HomePage.getItems();
 		Assert.assertEquals(Actual, items);
