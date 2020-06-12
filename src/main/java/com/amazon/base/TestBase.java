@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.amazon.utils.Xls_Reader;
 import com.relevantcodes.extentreports.*;
 
 public class TestBase {
@@ -27,7 +28,8 @@ public class TestBase {
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static ExtentReports extent;
 	public static Method M;
-
+	public static Xls_Reader excel = new Xls_Reader(
+			System.getProperty("user.dir") + "\\src\\main\\java\\com\\amazon\\TestData\\Data.xlsx");
 	public static ExtentTest test;
 
 	@BeforeSuite

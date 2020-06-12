@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="ExtentReport.ExtentReportListener"></listener>
+		<listener class-name="com.amazon.utils.ExtentReportManager" />
 	</listeners>
 	<test name="Test1">
 		<classes>
 			<class name="com.amazon.qa.testcases.LoginPageTest" />
-			<class name="com.amazon.qa.testcases.HomePageTest" />
+			
 
 		</classes>
 	</test> <!-- Test -->

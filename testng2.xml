@@ -9,7 +9,7 @@
 	</listeners>
 	<test name="Test">
 		<classes>
-			<class name="com.amazon.qa.testcases.HomePageTest" />
+			<class name="com.amazon.qa.testcases.CalendarTest" />
 
 		</classes>
 	</test> <!-- Test -->

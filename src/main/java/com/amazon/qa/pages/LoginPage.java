@@ -12,6 +12,7 @@ import org.testng.annotations.DataProvider;
 import com.amazon.base.TestBase;
 import com.amazon.utils.Xls_Reader;
 import com.amazon.utils.takeScreenshot;
+import com.freecrm.pages.TopMenu.TopMenuItems;
 
 public class LoginPage extends TestBase {
 
@@ -26,8 +27,7 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath = "//input[@value='Login']")
 	public WebElement Login;
 
-	public static Xls_Reader excel = new Xls_Reader(
-			System.getProperty("user.dir") + "\\src\\main\\java\\com\\amazon\\TestData\\Data.xlsx");;
+	
 
 	// Initializing the Page Objects:
 	public LoginPage() {
@@ -35,12 +35,12 @@ public class LoginPage extends TestBase {
 	}
 
 	// Actions
-	public HomePage login(String uname, String Pword) {
+	public TopMenuItems login(String uname, String Pword) {
 
 		username.sendKeys(uname);
 		password.sendKeys(Pword);
 		Login.click();
-		return new HomePage();
+		return new TopMenuItems();
 	}
 
 	public boolean SignIn() {

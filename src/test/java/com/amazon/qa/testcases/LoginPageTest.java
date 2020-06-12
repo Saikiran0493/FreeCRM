@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.amazon.base.TestBase;
-import com.amazon.qa.pages.HomePage;
+import com.amazon.qa.pages.Calendar;
 import com.amazon.qa.pages.LoginPage;
 import com.amazon.qa.pages.userHomePage;
 import com.amazon.utils.reusableMethods;
