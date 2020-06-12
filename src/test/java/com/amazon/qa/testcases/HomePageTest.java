@@ -38,8 +38,8 @@ public class HomePageTest extends TestBase {
 		initialization();
 
 		LoginPage = new LoginPage();
-		LoginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		HomePage = new HomePage();
+		HomePage=LoginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		//HomePage = new HomePage();
 	}
 
 	@Test(priority = 3)
