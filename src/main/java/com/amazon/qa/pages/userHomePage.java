@@ -26,7 +26,7 @@ public class userHomePage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void hoverOverCompanies() {
+	public void hoverOverCompanies() throws InterruptedException {
 
 		reusableMethods.hoverOver(Companies);
 

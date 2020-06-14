@@ -27,8 +27,6 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath = "//input[@value='Login']")
 	public WebElement Login;
 
-	
-
 	// Initializing the Page Objects:
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
@@ -81,6 +79,36 @@ public class LoginPage extends TestBase {
 		}
 
 		System.out.println(data);
+		return data;
+
+	}
+
+	@DataProvider(name = "dp1")
+	public Object[][] getData1(Method m) {
+
+		String sheetName = m.getName();
+		int rows = excel.getRowCount(sheetName);
+		int cols = excel.getColumnCount(sheetName);
+
+		System.out.println(sheetName + " rows=" + rows + "\n" + "Cols=" + cols);
+
+		Object[][] data = new Object[3][2];
+
+		// Hashtable<String, String> table = null;
+
+		for (int rowNum = 2; rowNum <= rows; rowNum++) { // 2
+
+			// table = new Hashtable<String, String>();
+
+			for (int colNum = 0; colNum < cols - 1; colNum++) {
+
+				System.out.println(excel.getCellData(sheetName, colNum, rowNum));
+				data[rowNum - 2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
+
+			}
+
+		}
+
 		return data;
 
 	}

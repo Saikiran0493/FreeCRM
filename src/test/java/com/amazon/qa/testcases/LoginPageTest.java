@@ -1,5 +1,6 @@
 package com.amazon.qa.testcases;
 
+import java.net.MalformedURLException;
 import java.util.Hashtable;
 
 import org.testng.Assert;
@@ -26,7 +27,7 @@ public class LoginPageTest extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialization();
 		Login = new LoginPage();
 
@@ -36,10 +37,26 @@ public class LoginPageTest extends TestBase {
 	 * Assert.assertEquals(Login.username.isDisplayed(), true); }
 	 */
 
-	@Test(priority = 2, dataProviderClass = LoginPage.class, dataProvider = "dp")
-	public void Login(Hashtable<String, String> data) {
+	@Test(priority = 2, dataProviderClass = LoginPage.class, dataProvider = "dp", enabled = false)
+	public void Login1(Hashtable<String, String> data) {
 
 		Login.login(data.get("username"), data.get("password"));
+		if (Login.SignIn() == true) {
+			// Assert.assertTrue(true);
+			LoginPage.excel.setCellData("Login", "Result", rowCounter, "PASS");
+		} else {
+			LoginPage.excel.setCellData("Login", "Result", rowCounter, "FAIL");
+
+			Assert.assertEquals(Login.username.isDisplayed(), true, " Invalid Credentials");
+
+		}
+		rowCounter = rowCounter + 1;
+	}
+
+	@Test(priority = 2, dataProviderClass = LoginPage.class, dataProvider = "dp1")
+	public void Login(String username, String password) {
+		System.out.println(username + " " + password);
+		Login.login(username, password);
 		if (Login.SignIn() == true) {
 			// Assert.assertTrue(true);
 			LoginPage.excel.setCellData("Login", "Result", rowCounter, "PASS");

@@ -1,5 +1,6 @@
 package com.amazon.qa.testcases;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 
 import org.testng.Assert;
@@ -27,10 +28,11 @@ public class userHomePageTest extends TestBase {
 	}
 
 	@BeforeClass
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialization();
 		LoginPage = new LoginPage();
-		//HomePage = LoginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		// HomePage = LoginPage.login(prop.getProperty("username"),
+		// prop.getProperty("password"));
 		try {
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -40,7 +42,7 @@ public class userHomePageTest extends TestBase {
 	}
 
 	@Test(priority = 5)
-	public void validLogin() {
+	public void validLogin() throws InterruptedException {
 
 		userHomePage.hoverOverCompanies();
 		ArrayList<String> Actual = new ArrayList<String>();

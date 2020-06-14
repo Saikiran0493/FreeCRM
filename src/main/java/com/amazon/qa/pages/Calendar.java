@@ -67,7 +67,7 @@ public class Calendar extends TestBase {
 
 	}
 
-	public void hoverOverCalender() {
+	public void hoverOverCalender() throws InterruptedException {
 
 		reusableMethods.hoverOver(calender);
 	}
@@ -84,7 +84,7 @@ public class Calendar extends TestBase {
 
 	}
 
-	public void clickNewEvent() {
+	public void gotoNewEvent() {
 		// TODO Auto-generated method stub
 		NewEvent.click();
 
@@ -96,7 +96,7 @@ public class Calendar extends TestBase {
 
 	}
 
-	public void enterEventInformation() {
+	public void createEvent() {
 
 		title.sendKeys("Meeting-1");
 

@@ -9,6 +9,7 @@ import com.relevantcodes.extentreports.*;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
@@ -39,7 +40,7 @@ public class HomePageTest extends TestBase {
 	}
 
 	@BeforeClass
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialization();
 
 		LoginPage = new LoginPage();
@@ -97,7 +98,7 @@ public class HomePageTest extends TestBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		HomePage.clickNewEvent();
+		HomePage.gotoNewEvent();
 
 		try {
 
@@ -117,7 +118,7 @@ public class HomePageTest extends TestBase {
 
 	@Test(priority = 5, enabled = false)
 	public void newEventInformation() {
-		HomePage.enterEventInformation();
+		HomePage.gotoNewEvent();
 		Assert.assertEquals(HomePage.newEventSuccessfull(), true);
 
 		try {
