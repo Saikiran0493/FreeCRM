@@ -1,8 +1,8 @@
 package com.amazon.qa.testcases;
 
+import java.io.BufferedReader;
 import java.net.MalformedURLException;
 import java.util.Hashtable;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -40,6 +40,7 @@ public class LoginPageTest extends TestBase {
 	@Test(priority = 2, dataProviderClass = LoginPage.class, dataProvider = "dp", enabled = false)
 	public void Login1(Hashtable<String, String> data) {
 
+		System.out.println(System.currentTimeMillis());
 		Login.login(data.get("username"), data.get("password"));
 		if (Login.SignIn() == true) {
 			// Assert.assertTrue(true);
