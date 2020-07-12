@@ -44,7 +44,16 @@ public class HomePageTest extends TestBase {
 		initialization();
 
 		LoginPage = new LoginPage();
+
 		topItems = LoginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+
+
+		//HomePage=LoginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		//HomePage = new HomePage();
+
+		topItems = LoginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+
+
 
 	}
 
