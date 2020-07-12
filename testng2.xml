@@ -9,8 +9,10 @@
 	</listeners>
 	<test name="Test">
 		<classes>
-			<class name="com.amazon.qa.testcases.HomePageTest" />
+			<class name="com.amazon.qa.testcases.CalendarTest" />
 
 		</classes>
-	</test> <!-- Test -->
+	</test>
+	<!-- <test name="Test1"> <classes> <class name="com.amazon.qa.testcases.LoginPageTest" 
+		/> </classes> </test> Test -->
 </suite> <!-- Suite -->

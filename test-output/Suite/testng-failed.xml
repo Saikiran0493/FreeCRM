@@ -6,17 +6,16 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.amazon.qa.testcases.HomePageTest">
+      <class name="com.amazon.qa.testcases.CalendarTest">
         <methods>
+          <include name="generateExtentReport"/>
+          <include name="Calendar"/>
+          <include name="initExtentReport"/>
           <include name="calenderNewItem"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="newEventInformation"/>
-          <include name="generateExtentReport"/>
-          <include name="calItems"/>
-          <include name="initExtentReport"/>
         </methods>
-      </class> <!-- com.amazon.qa.testcases.HomePageTest -->
+      </class> <!-- com.amazon.qa.testcases.CalendarTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

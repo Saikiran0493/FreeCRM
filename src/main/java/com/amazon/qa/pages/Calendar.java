@@ -1,6 +1,7 @@
 package com.amazon.qa.pages;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.amazon.base.TestBase;
 import com.amazon.utils.reusableMethods;
 
-public class HomePage extends TestBase {
+public class Calendar extends TestBase {
 
 	@FindBy(xpath = "//a[contains(@href,'logout')]")
 	public WebElement Logout;
@@ -48,7 +49,7 @@ public class HomePage extends TestBase {
 	public WebElement newEventsuccessful;
 
 	// Initializing the Page Objects:
-	public HomePage() {
+	public Calendar() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -66,24 +67,24 @@ public class HomePage extends TestBase {
 
 	}
 
-	public void hoverOverCalender() {
+	public void hoverOverCalender() throws InterruptedException {
 
 		reusableMethods.hoverOver(calender);
 	}
 
-	public ArrayList<String> getItems() {
+	public Hashtable<String, String> getItems(String Element) {
 
-		ArrayList<String> val = new ArrayList<String>();
+		Hashtable<String, String> val = new Hashtable<String, String>();
 
 		for (int j = 1; j <= calenderlist.findElements(By.tagName("a")).size(); j++) {
 
-			val.add(calenderlist.findElements(By.tagName("a")).get(j - 1).getText());
+			val.put(Element, calenderlist.findElements(By.tagName("a")).get(j - 1).getText());
 		}
 		return val;
 
 	}
 
-	public void clickNewEvent() {
+	public void gotoNewEvent() {
 		// TODO Auto-generated method stub
 		NewEvent.click();
 
@@ -95,7 +96,7 @@ public class HomePage extends TestBase {
 
 	}
 
-	public void enterEventInformation() {
+	public void createEvent() {
 
 		title.sendKeys("Meeting-1");
 

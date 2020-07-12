@@ -1,41 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="2" ignored="1" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="34844" started-at="2020-06-09T21:26:48 IST" finished-at="2020-06-09T21:27:23 IST">
+  <suite name="Suite" duration-ms="17160" started-at="2020-06-14T20:25:30 IST" finished-at="2020-06-14T20:25:47 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="34844" started-at="2020-06-09T21:26:48 IST" finished-at="2020-06-09T21:27:23 IST">
-      <class name="com.amazon.qa.testcases.HomePageTest">
-        <test-method status="PASS" signature="initExtentReport()[pri:0, instance:com.amazon.qa.testcases.HomePageTest@a7b76d]" name="initExtentReport" is-config="true" duration-ms="228" started-at="2020-06-09T21:26:48 IST" finished-at="2020-06-09T21:26:48 IST">
+    <test name="Test" duration-ms="17160" started-at="2020-06-14T20:25:30 IST" finished-at="2020-06-14T20:25:47 IST">
+      <class name="com.amazon.qa.testcases.CalendarTest">
+        <test-method status="PASS" signature="initExtentReport()[pri:0, instance:com.amazon.qa.testcases.CalendarTest@1683daf]" name="initExtentReport" is-config="true" duration-ms="209" started-at="2020-06-14T20:25:30 IST" finished-at="2020-06-14T20:25:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initExtentReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.amazon.qa.testcases.HomePageTest@a7b76d]" name="setUp" is-config="true" duration-ms="23733" started-at="2020-06-09T21:26:48 IST" finished-at="2020-06-09T21:27:12 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.amazon.qa.testcases.CalendarTest@1683daf]" name="setUp" is-config="true" duration-ms="14650" started-at="2020-06-14T20:25:30 IST" finished-at="2020-06-14T20:25:45 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="calItems()[pri:3, instance:com.amazon.qa.testcases.HomePageTest@a7b76d]" name="calItems" duration-ms="1452" started-at="2020-06-09T21:27:12 IST" finished-at="2020-06-09T21:27:13 IST">
+        <test-method status="FAIL" signature="Calendar()[pri:3, instance:com.amazon.qa.testcases.CalendarTest@1683daf]" name="Calendar" duration-ms="2162" started-at="2020-06-14T20:25:45 IST" finished-at="2020-06-14T20:25:47 IST">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.amazon.utils.reusableMethods.hoverOver(reusableMethods.java:11)
+at com.freecrm.pages.TopMenu.TopMenuItems.gotoCalendar(TopMenuItems.java:49)
+at com.amazon.qa.testcases.CalendarTest.Calendar(CalendarTest.java:44)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- calItems -->
-        <test-method status="PASS" signature="calenderNewItem()[pri:4, instance:com.amazon.qa.testcases.HomePageTest@a7b76d]" name="calenderNewItem" duration-ms="3673" started-at="2020-06-09T21:27:13 IST" finished-at="2020-06-09T21:27:17 IST">
+        </test-method> <!-- Calendar -->
+        <test-method status="FAIL" signature="calenderNewItem()[pri:4, instance:com.amazon.qa.testcases.CalendarTest@1683daf]" name="calenderNewItem" duration-ms="3" started-at="2020-06-14T20:25:47 IST" finished-at="2020-06-14T20:25:47 IST">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.amazon.qa.testcases.CalendarTest.calenderNewItem(CalendarTest.java:61)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calenderNewItem -->
-        <test-method status="PASS" signature="newEventInformation()[pri:5, instance:com.amazon.qa.testcases.HomePageTest@a7b76d]" name="newEventInformation" duration-ms="4868" started-at="2020-06-09T21:27:17 IST" finished-at="2020-06-09T21:27:22 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newEventInformation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.amazon.qa.testcases.HomePageTest@a7b76d]" name="tearDown" is-config="true" duration-ms="1058" started-at="2020-06-09T21:27:22 IST" finished-at="2020-06-09T21:27:23 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.amazon.qa.testcases.CalendarTest@1683daf]" name="tearDown" is-config="true" duration-ms="276" started-at="2020-06-14T20:25:47 IST" finished-at="2020-06-14T20:25:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="generateExtentReport()[pri:0, instance:com.amazon.qa.testcases.HomePageTest@a7b76d]" name="generateExtentReport" is-config="true" duration-ms="615" started-at="2020-06-09T21:27:24 IST" finished-at="2020-06-09T21:27:24 IST">
+        <test-method status="PASS" signature="generateExtentReport()[pri:0, instance:com.amazon.qa.testcases.CalendarTest@1683daf]" name="generateExtentReport" is-config="true" duration-ms="524" started-at="2020-06-14T20:25:47 IST" finished-at="2020-06-14T20:25:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateExtentReport -->
-      </class> <!-- com.amazon.qa.testcases.HomePageTest -->
+      </class> <!-- com.amazon.qa.testcases.CalendarTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
