@@ -102,7 +102,6 @@ public class LoginPage extends TestBase {
 
 			for (int colNum = 0; colNum < cols - 1; colNum++) {
 
-				System.out.println(excel.getCellData(sheetName, colNum, rowNum));
 				data[rowNum - 2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
 
 			}

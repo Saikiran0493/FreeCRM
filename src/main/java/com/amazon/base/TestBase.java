@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -37,10 +38,12 @@ public class TestBase {
 	public static Xls_Reader excel = new Xls_Reader(
 			System.getProperty("user.dir") + "\\src\\main\\java\\com\\amazon\\TestData\\Data.xlsx");
 	public static ExtentTest test;
+	
 
 	@BeforeSuite
 	public void initExtentReport() {
 		extent = new ExtentReports(System.getProperty("user.dir") + "//target//surefire-reports//extentnew.html");
+		 
 	}
 
 	@AfterSuite
@@ -57,7 +60,7 @@ public class TestBase {
 			FileInputStream ip = new FileInputStream(
 					System.getProperty("user.dir") + "\\src\\main\\java\\com\\amazon\\config\\config.properties");
 			prop.load(ip);
-
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -88,13 +91,12 @@ public class TestBase {
 
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setBrowserName(browserName);
-			System.out.println(cap.getCapability(browserName));
 			cap.setPlatform(Platform.ANY);
 
 			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
 
 			// driver = new ChromeDriver();
-			// action = new Actions(driver);
+			action = new Actions(driver);
 		} else if (prop.getProperty("browser").equals("ie")) {
 
 			// System.setProperty("webdriver.gecko.driver", "gecko.exe");
