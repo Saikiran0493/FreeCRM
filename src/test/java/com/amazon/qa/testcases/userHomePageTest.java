@@ -20,6 +20,8 @@ public class userHomePageTest extends TestBase {
 	LoginPage LoginPage;
 	Calendar HomePage;
 	userHomePage userHomePage;
+	userHomePage userHomePage1;
+
 
 	public userHomePageTest() {
 		// TODO Auto-generated constructor stub
