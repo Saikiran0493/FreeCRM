@@ -4,6 +4,7 @@ public class Sample {
 	
 	public void sum() {
 		
+		
 		String a;
 	}
 
